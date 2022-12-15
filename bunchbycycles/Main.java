@@ -30,7 +30,7 @@ public class Main {
     assert(counts.mediumCount == 3);
     assert(counts.highCount == 1);
     //printing count
-    System.out.println(counts.lowCount+" \n"+""+counts.mediumCount+"\n"+counts.highCount);
+    System.out.println(counts.lowCount+"-low \n"+""+counts.mediumCount+"-medium \n"+counts.highCount+"-high");
     System.out.println("Done counting :)\n");
   }
 
