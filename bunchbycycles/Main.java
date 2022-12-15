@@ -9,6 +9,17 @@ public class Main {
 
   static CountsByUsage countBatteriesByUsage(int[] cycles) {
     CountsByUsage counts = new CountsByUsage();
+    //count the number of batteries in each classification
+     for(int i=0;i<cycles.length;i++){
+      if(cycles[i]<310){
+        counts.lowCount++;
+      }
+      else if(cycles[i]>310 & cycles[i]<929){
+        counts.mediumCount++;
+      }
+      else{
+        counts.highCount++;
+      }
     return counts;
   }
 
@@ -18,6 +29,8 @@ public class Main {
     assert(counts.lowCount == 2);
     assert(counts.mediumCount == 3);
     assert(counts.highCount == 1);
+    //printing count
+    System.out.println(counts.lowCount+" \n"+""+counts.mediumCount+"\n"+counts.highCount);
     System.out.println("Done counting :)\n");
   }
 
